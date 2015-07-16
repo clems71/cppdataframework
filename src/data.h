@@ -138,6 +138,11 @@ public: \
         return memberNames().size(); \
     } \
     \
+    constexpr static bool hasMember(const char * memberName) \
+    { \
+        return memberIndex(memberName) < memberCount(); \
+    } \
+    \
     /* References are returned by std::tie */ \
     inline auto memberValues() { \
         return TupleBuilder<std::tuple<>>() F(__DATA_MEMBER_VALUE) .tuple(); \
