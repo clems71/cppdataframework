@@ -1,0 +1,3 @@
+add_library(cppdataframework INTERFACE)
+target_include_directories(cppdataframework INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(cppdataframework INTERFACE jsoncpp)
